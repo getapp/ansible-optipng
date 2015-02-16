@@ -1,0 +1,5 @@
+optipng_version: '0.7.5'
+optipng_tmp_path: /opt
+optipng_source_path: "{{optipng_tmp_path}}/optipng.tar.gz"
+optipng_source_url: "http://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-{{optipng_version}}/optipng-{{optipng_version}}.tar.gz"
+optipng_unpacked_sources_path: "{{optipng_tmp_path}}/optipng-{{optipng_version}}"

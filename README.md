@@ -1,0 +1,1 @@
+Installs `optipng` from sources

@@ -1,0 +1,14 @@
+- name: download source
+  get_url: dest={{optipng_source_path}} url={{optipng_source_url}}
+
+- name: unarchive source
+  unarchive: src={{optipng_source_path}} dest={{optipng_tmp_path}} copy=no creates={{optipng_unpacked_sources_path}}
+  
+- name: install
+  shell: "{{item}}"
+  args:
+    chdir: "{{optipng_unpacked_sources_path}}"
+  with_items:
+   - './configure'
+   - 'make'
+   - 'make install'
